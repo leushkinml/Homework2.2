@@ -1,6 +1,6 @@
 public class Human {
 
-    // 1,2-е задание
+    // ДЗ 1: 1,2-е задание
     /*
     String name;
     int age;
@@ -9,7 +9,7 @@ public class Human {
     String job;
     */
 
-    // 2-е задание
+    // ДЗ 2: 1-е задание
     private final String name;
     private int age;
     private String town;

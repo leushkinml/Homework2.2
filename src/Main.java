@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        // 1,2-е задание
+        // ДЗ 1: 1,2-е задание
         /*
         Human maxim = new Human();
         maxim.name = "Максим";
@@ -28,7 +28,7 @@ public class Main {
         artem.job = "Директор по развитию бизнеса";*/
 
 
-        // 2-е задание
+        // ДЗ 2: 1-е задание
 
         Human maxim = new Human("Максим", 35, "Минск", "Бренд-менеджер");
         Human ann = new Human("Аня", 29, "Москва", "Методист образовательных программ");
@@ -41,7 +41,7 @@ public class Main {
         greeting(artem);
 
     }
-    // 1,2-е задание
+    // ДЗ 1: 1,2-е задание
     /*
     public static void greeting(Human human) {
     System.out.println("Привет! Меня зовут " + human.name + ". Я из города " + human.town +
@@ -50,7 +50,7 @@ public class Main {
     */
 
 
-    // 2-е задание
+    // ДЗ 2: 1-е задание
     public static void greeting(Human human) {
         System.out.println("Привет! Меня зовут " + human.getName() + ". Я из города " + human.getTown() +
                 ". Я родился в " + human.getYearOfBirth() + " году. Я работаю на должности " + human.getJob() + ". Будем знакомы!");

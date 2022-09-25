@@ -30,7 +30,7 @@ public class Main {
 
         // ДЗ 2: 1-е задание
 
-        Human maxim = new Human("Максим", 35, "Минск", "Бренд-менеджер");
+        Human maxim = new Human("Максим", 30, "Минск", "Бренд-менеджер");
         Human ann = new Human("Аня", 29, "Москва", "Методист образовательных программ");
         Human kate = new Human("Катя", 28, "Калининград","Продакт-менеджер");
         Human artem = new Human("Артём", 27, "Москва","Директор по развитию бизнеса");
@@ -39,6 +39,15 @@ public class Main {
         greeting(ann);
         greeting(kate);
         greeting(artem);
+
+        System.out.println();
+
+        //ДЗ 3: 1-е задание
+        Human mike = new Human("Михал");
+        greeting(mike);
+
+        Human paul = new Human(44);
+        greeting(paul);
 
     }
     // ДЗ 1: 1,2-е задание

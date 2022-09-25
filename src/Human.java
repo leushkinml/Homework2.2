@@ -10,16 +10,27 @@ public class Human {
     */
 
     // ДЗ 2: 1-е задание
-    private final String name;
+    private String name;
     private int age;
     private String town;
     private int yearOfBirth;
     private String job;
 
+    //ДЗ 3: 1-е задание
+    public Human(String name) {
+        this(name, 0, "Информация не указана", "Информация не указана");
+    }
+    public Human(int age) {
+        this("Информация не указана", age, "Информация не указана", "Информация не указана");
+    }
 
     public Human(String name, int age, String town, String job) {
         this.name = name;
-        this.age = age;
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            this.age = Math.abs(age);
+        }
         this.town = town;
         this.job = job;
     }
@@ -33,7 +44,12 @@ public class Human {
     }
 
     public int getYearOfBirth() {
-        yearOfBirth = (2022 - age);
+        if (age != 0) {
+            yearOfBirth = (2022 - age);
+        } else {
+            yearOfBirth = 0;
+        }
+
         return yearOfBirth;
     }
 

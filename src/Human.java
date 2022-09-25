@@ -20,12 +20,14 @@ public class Human {
     public Human(String name) {
         this(name, 0, "Информация не указана", "Информация не указана");
     }
-    public Human(int age) {
-        this("Информация не указана", age, "Информация не указана", "Информация не указана");
-    }
 
     public Human(String name, int age, String town, String job) {
-        this.name = name;
+        if (name == null) {
+            this.name = "Информация не указана";
+        } else {
+            this.name = name;
+        }
+
         if (age >= 0) {
             this.age = age;
         } else {
@@ -76,6 +78,8 @@ public class Human {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", town='" + town + '\'' +
+                ", yearOfBirth=" + yearOfBirth +
+                ", job='" + job + '\'' +
                 '}';
     }
 }

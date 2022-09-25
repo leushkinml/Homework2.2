@@ -46,9 +46,6 @@ public class Main {
         Human mike = new Human("Михал");
         greeting(mike);
 
-        Human paul = new Human(44);
-        greeting(paul);
-
     }
     // ДЗ 1: 1,2-е задание
     /*

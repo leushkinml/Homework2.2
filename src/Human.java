@@ -44,8 +44,9 @@ public class Human {
     }
 
     public int getYearOfBirth() {
+        int currentYear = 2022;
         if (age != 0) {
-            yearOfBirth = (2022 - age);
+            yearOfBirth = (currentYear - age);
         } else {
             yearOfBirth = 0;
         }

@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Human {
 
     // ДЗ 1: 1,2-е задание
@@ -10,11 +12,11 @@ public class Human {
     */
 
     // ДЗ 2: 1-е задание
-    private String name;
+    public String name;
     private int age;
     private String town;
     private int yearOfBirth;
-    private String job;
+    public String job;
 
     //ДЗ 3: 1-е задание
     public Human(String name) {
@@ -37,23 +39,21 @@ public class Human {
         this.job = job;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public int getYearOfBirth() {
-        int currentYear = 2022;
+       public int getYearOfBirth() {
         if (age != 0) {
-            yearOfBirth = (currentYear - age);
+            this.yearOfBirth = (LocalDate.now().getYear() - age);
         } else {
-            yearOfBirth = 0;
+            this.yearOfBirth = 0;
         }
-
         return yearOfBirth;
+    }
+
+    public void setYearOfBirth(int yearOfBirth) {
+        if (yearOfBirth >= 0) {
+            this.yearOfBirth = yearOfBirth;
+        } else {
+            this.yearOfBirth = 0;
+        }
     }
 
     public String getTown() {
@@ -61,16 +61,14 @@ public class Human {
     }
 
     public void setTown(String town) {
-        this.town = town;
+        if (town != null || !town.isEmpty() || !town.isBlank()) {
+            this.town = town;
+        } else {
+            this.town = "Информация не указана";
+        }
     }
 
-    public String getJob() {
-        return job;
-    }
 
-    public void setJob(String job) {
-        this.job = job;
-    }
 
     @Override
     public String toString() {

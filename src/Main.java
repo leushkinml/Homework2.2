@@ -46,6 +46,10 @@ public class Main {
         Human mike = new Human("Михал");
         greeting(mike);
 
+        //ДЗ 4: 1-е задание
+        Human vladimir = new Human("Владимир", 21, "", "Временно не работаю");
+        greeting(vladimir);
+
     }
     // ДЗ 1: 1,2-е задание
     /*
@@ -58,7 +62,10 @@ public class Main {
 
     // ДЗ 2: 1-е задание
     public static void greeting(Human human) {
-        System.out.println("Привет! Меня зовут " + human.getName() + ". Я из города " + human.getTown() +
-                ". Я родился в " + human.getYearOfBirth() + " году. Я работаю на должности " + human.getJob() + ". Будем знакомы!");
+        System.out.println("Привет! Меня зовут " + human.name + ". " +
+                "Я из города " + human.getTown() +
+                ". Я родился в " + human.getYearOfBirth() + " году. " +
+                "Я работаю на должности " + human.job + ". " +
+                "Будем знакомы!");
     }
 }

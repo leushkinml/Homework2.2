@@ -47,8 +47,33 @@ public class Main {
         greeting(mike);
 
         //ДЗ 4: 1-е задание
-        Human vladimir = new Human("Владимир", 21, "", "Временно не работаю");
+        Human vladimir = new Human("Владимир", 21, "Казань", "Временно не работаю");
         greeting(vladimir);
+
+        //ДЗ 4: 2-е задание
+        Flower rose = new Flower("","Голландия", 35.59);
+        Flower chrysanthemum = new Flower("", "", 15.0, 5);
+        Flower pion = new Flower("", "Англия", 69.9,1);
+        Flower gypsophila = new Flower("", "Турция", 19.5,10);
+
+        System.out.println();
+        flowerInfo(rose);
+        flowerInfo(chrysanthemum);
+        flowerInfo(pion);
+        flowerInfo(gypsophila);
+
+        System.out.println();
+
+
+        setOfFlowers();
+        double cost = Flower.costOfSet(rose, rose, rose,
+                chrysanthemum,chrysanthemum,chrysanthemum,chrysanthemum,chrysanthemum,
+                gypsophila);
+        int minimumLifeSpan = Flower.minLifeSpan(rose, rose, rose,
+                chrysanthemum,chrysanthemum,chrysanthemum,chrysanthemum,chrysanthemum,
+                gypsophila);
+        System.out.println("Стоимость букета с учётом стоимости работ флориста составляет " + cost);
+        System.out.println("Минимальный срок стояния букета составляет " + minimumLifeSpan);
 
     }
     // ДЗ 1: 1,2-е задание
@@ -67,5 +92,35 @@ public class Main {
                 ". Я родился в " + human.getYearOfBirth() + " году. " +
                 "Я работаю на должности " + human.job + ". " +
                 "Будем знакомы!");
+    }
+
+    public static void flowerInfo(Flower flower) {
+        System.out.println("Цвет цветка: " + flower.getFlowerColor() +
+                ". Страна происхождения: " + flower.getCountry() +
+                ". Стоимость: " + flower.getCost() +
+                ". Срок стояния: " + flower.lifeSpan +
+                 " дней.");
+    }
+
+
+     public static void setOfFlowers() {
+         int countOfRose = 3;
+         int countOfChrysanthemum = 5;
+         int countOfPion = 0;
+         int countOfGypsophila = 1;
+
+         System.out.println("Букет состоит из:");
+         if (countOfRose > 0) {
+             System.out.println("Роз в кличестве " + countOfRose + " штук.");
+         }
+         if (countOfChrysanthemum > 0) {
+             System.out.println("Хризантем в кличестве " + countOfChrysanthemum + " штук.");
+         }
+         if (countOfPion > 0) {
+             System.out.println("Пионов в кличестве " + countOfPion + " штук.");
+         }
+         if (countOfGypsophila > 0) {
+             System.out.println("Гипсофил в кличестве " + countOfGypsophila + " штук.");
+         }
     }
 }
